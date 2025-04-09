@@ -1035,7 +1035,7 @@ Socker.HTTP(proxyOptions, async (connection, error) => {
         }
 
         sendRequests();
-    }, 1000);
+    }, 2000);
 });
 
     

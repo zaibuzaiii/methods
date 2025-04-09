@@ -887,7 +887,7 @@ Socker.HTTP(proxyOptions, async (connection, error) => {
                 await Promise.all(requests.map(({ requestPromise }) => requestPromise));
                 client.write(Buffer.concat(frames));
             }
-        }, 1000);  
+        }, 2000);  
     });
     
         client.on("close", () => {
