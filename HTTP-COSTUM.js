@@ -120,7 +120,7 @@ if (url.hostname.endsWith(blockedDomain)) {
     process.exit(1);
 }
 
-if (!['GET', 'POST', 'HEAD', 'OPTIONS', 'CONNECT', 'PATCH', 'TRACE', 'PURGE'].includes(reqmethod)) {
+if (!['GET', 'POST', 'HEAD', 'OPTIONS', 'CONNECT', 'PATCH', 'TRACE', 'PURGE',  'COPY', 'LOCK', 'UNLOCK', 'PROPFIND', 'PROPPATCH', 'MKCOL', 'MOVE', 'REPORT', 'CHECKOUT', 'CHECKIN', 'UNCHECKOUT', 'MKWORKSPACE', 'VERSION-CONTROL', 'ORDERPATCH', 'LABEL', 'MERGE', 'BASELINE-CONTROL', 'UPDATE', 'XUPDATE', 'LINK', 'UNLINK', 'MKCALENDAR', 'SEARCH', 'ACL', 'BIND', 'REBIND', 'UNBIND', 'SUBSCRIBE', 'UNSUBSCRIBE', 'NOTIFY', 'POLL', 'BREW', 'WHEN', 'PUBLISH', 'VIEW', 'SOURCE', 'M-SEARCH', 'UNK'].includes(reqmethod)) {
     console.error('Error request method only can GET/POST/HEAD/OPTIONS');
     process.exit(1);
 }
